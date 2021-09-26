@@ -10,7 +10,7 @@ namespace Colors
 #define BLUE			1
 #define GREEN			2
 #define CYAN			3
-#define RED				4
+#define RED			4
 #define MAGENTA			5
 #define BROWN			6
 #define LIGHTGRAY		7
@@ -19,7 +19,7 @@ namespace Colors
 #define LIGHTGREEN		10
 #define LIGHTCYAN		11
 #define LIGHTRED		12
-#define PURPLE      	13
+#define PURPLE       		13
 #define YELLOW			14
 #define WHITE			15
 }
