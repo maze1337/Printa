@@ -1,3 +1,3 @@
 # Printa
 PRINTA
-simple concole gui mainly made for loaders
+Simple Console GUI mainly made for loaders
