@@ -3,29 +3,32 @@
 
 
 HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+int k;
 
-namespace Colors
+enum Colors
 {
-#define BLACK			0
-#define BLUE			1
-#define GREEN			2
-#define CYAN			3
-#define RED			4
-#define MAGENTA			5
-#define BROWN			6
-#define LIGHTGRAY		7
-#define DARKGRAY		8
-#define LIGHTBLUE		9
-#define LIGHTGREEN		10
-#define LIGHTCYAN		11
-#define LIGHTRED		12
-#define PURPLE       		13
-#define YELLOW			14
-#define WHITE			15
-}
+ BLACK,		
+ BLUE ,		
+ GREEN,			
+ CYAN,			
+ RED,				
+ MAGENTA,			
+ BROWN,			
+ LIGHTGRAY,		
+ DARKGRAY,		
+ LIGHTBLUE,		
+ LIGHTGREEN,		
+ LIGHTCYAN,		
+ LIGHTRED,		
+ PURPLE,      	
+ YELLOW,		
+ WHITE			
+};
 
 
-class Printa
+
+
+class Printa 
 {
 public:
 	const char* SetWhite()
@@ -124,7 +127,7 @@ public:
 		SetConsoleTextAttribute(h, color);
 		std::cout << text << std::endl;
 	}
-	void Custom(const char* symbol, int symbolColor, const char* text, int textColor)
+	void Custom(std::string symbol, int symbolColor, const char* text, int textColor)
 	{
 		SetWhite();
 		std::cout << " [ ";
@@ -135,11 +138,26 @@ public:
 		SetConsoleTextAttribute(h, textColor);
 		std::cout << text << std::endl;
 	}
+	void Rainbow(std::string text)
+	{
+		for (int i = 0; i < text.length(); i++)
+		{
+			k > 14 ? k = 1 : k++;
+			SetConsoleTextAttribute(h, k);
+			std::cout << text.at(i);
+		}
+		
+	}
 
 	void Endl()
 	{
 		std::cout << std::endl;
 	}
 }Printa;
+
+
+
+
+
 
 
