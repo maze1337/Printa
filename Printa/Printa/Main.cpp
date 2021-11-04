@@ -8,7 +8,6 @@
 
 int main()
 {
-    
     //title stuff
     SetConsoleTitleA("Hacc");
     Printa.Title("Printa 2.0");
