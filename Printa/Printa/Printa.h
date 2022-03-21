@@ -60,36 +60,36 @@ public:
 	void Arrow(int color)
 	{
 		SetConsoleTextAttribute(h, color);
-		std::cout << "-> ";
+		std::cout << xorstr("-> ");
 		SetWhite();
 	}
 	void Title(const char* text)
 	{
 		std::cout << std::endl;
 		SetPurple();
-		std::cout << "    " << text << std::endl;
+		std::cout << xorstr("    ") << text << std::endl;
 		std::cout << std::endl;
 		std::cout << std::endl;
 	}
 	void OK(const char* text)
 	{
 		SetWhite();
-		std::cout << " [";
+		std::cout << xorstr(" [");
 		SetGreen();
-		std::cout << "+";
+		std::cout << xorstr("+");
 		SetWhite();
-		std::cout << "] ";
+		std::cout << xorstr("] ");
 		std::cout << text << std::endl;
 		SetWhite();
 	}
 	void Input(const char* text)
 	{
 		SetWhite();
-		std::cout << " [ ";
+		std::cout << xorstr(" [ ");
 		SetBlue();
-		std::cout << "->";
+		std::cout << xorstr("->");
 		SetWhite();
-		std::cout << " ] ";
+		std::cout << xorstr(" ] ");
 		std::cout << text << "";
 		std::cout << std::endl;
 		SetWhite();
@@ -97,7 +97,7 @@ public:
 	void Loading(const char* text)
 	{
 		SetWhite();
-		std::cout << " [";
+		std::cout << xorstr(" [");
 		SetPurple();
 		std::cout << "<-->";
 		SetWhite();
