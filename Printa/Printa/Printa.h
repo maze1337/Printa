@@ -99,9 +99,9 @@ public:
 		SetWhite();
 		std::cout << xorstr(" [");
 		SetPurple();
-		std::cout << "<-->";
+		std::cout << xorstr("<-->");
 		SetWhite();
-		std::cout << "] ";
+		std::cout << xorstr("] ");
 		std::cout << text << std::endl;
 		SetWhite();
 
@@ -109,11 +109,11 @@ public:
 	void Fail(const char* text)
 	{
 		SetWhite();
-		std::cout << " [";
+		std::cout << xorstr(" [");
 		SetRed();
-		std::cout << "-";
+		std::cout << xorstr("-");
 		SetWhite();
-		std::cout << "] ";
+		std::cout << xorstr("] ");
 		std::cout << text << std::endl;
 		SetWhite();
 	}
@@ -130,11 +130,11 @@ public:
 	void Custom(std::string symbol, int symbolColor, const char* text, int textColor)
 	{
 		SetWhite();
-		std::cout << " [ ";
+		std::cout << xorstr(" [ ");
 		SetConsoleTextAttribute(h, symbolColor);
 		std::cout << symbol;
 		SetWhite();
-		std::cout << " ] ";
+		std::cout << xorstr(" ] ");
 		SetConsoleTextAttribute(h, textColor);
 		std::cout << text << std::endl;
 	}
