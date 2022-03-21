@@ -1,5 +1,9 @@
 #pragma once
+#include <iostream>
+#include <Windows.h>
 
+
+#include "Xorstr.h"
 
 
 HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -7,28 +11,28 @@ int k;
 
 enum Colors
 {
- BLACK,		
- BLUE ,		
- GREEN,			
- CYAN,			
- RED,				
- MAGENTA,			
- BROWN,			
- LIGHTGRAY,		
- DARKGRAY,		
- LIGHTBLUE,		
- LIGHTGREEN,		
- LIGHTCYAN,		
- LIGHTRED,		
- PURPLE,      	
- YELLOW,		
- WHITE			
+	BLACK,
+	BLUE,
+	GREEN,
+	CYAN,
+	RED,
+	MAGENTA,
+	BROWN,
+	LIGHTGRAY,
+	DARKGRAY,
+	LIGHTBLUE,
+	LIGHTGREEN,
+	LIGHTCYAN,
+	LIGHTRED,
+	PURPLE,
+	YELLOW,
+	WHITE
 };
 
 
 
 
-class Printa 
+class Printa
 {
 public:
 	const char* SetWhite()
@@ -146,7 +150,7 @@ public:
 			SetConsoleTextAttribute(h, k);
 			std::cout << text.at(i);
 		}
-		
+
 	}
 
 	void Endl()
@@ -154,10 +158,3 @@ public:
 		std::cout << std::endl;
 	}
 }Printa;
-
-
-
-
-
-
-
